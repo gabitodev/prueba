@@ -36,5 +36,7 @@ app.use('/', express.static(path.resolve(__dirname, 'views', 'home')));
 app.use('/signup', express.static(path.resolve(__dirname, 'views', 'signup')));
 app.use('/login', express.static(path.resolve(__dirname, 'views', 'login')));
 app.use('/app/:id', express.static(path.resolve(__dirname, 'views', 'app')));
+app.use('*', express.static(path.resolve(__dirname, 'views', 'notfound')));
+
 
 module.exports = app;
