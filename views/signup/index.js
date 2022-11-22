@@ -49,7 +49,7 @@ form.addEventListener('submit', async e => {
             password: passwordInput.value
         }
         
-        await axios.post('http://localhost:3003/api/users', newUser);
+        await axios.post('/api/users', newUser);
         window.location.pathname = '/login';
     } catch (error) {
         const p = document.createElement('p');
