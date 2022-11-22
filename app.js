@@ -11,10 +11,11 @@ const cors = require('cors');
 const path = require('path');
 const authExtractor = require('./middleware/auth');
 const logoutRouter = require('./controllers/logout');
+const { MONGO_URI } = require('./config');
 
 (async () => {
     try {
-        await mongoose.connect(process.env.MONGO_URI_TEST);
+        await mongoose.connect(MONGO_URI);
         console.log('Conecto a mongoDB')
     } catch (error) {
         console.log('No conecto a MongoDB')
